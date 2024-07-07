@@ -5,6 +5,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+:root {
+    --border-columns: rgb(112, 112, 112);
+    --border-sub-field: rgb(185, 185, 185)
+  }
+
+
 body {
     padding: 10px;
     display: flex;
@@ -21,7 +28,7 @@ body {
 
     .titulo_tabla {
         padding: 20px 0;
-        border: 1px solid black;
+        border-bottom: 1px solid black;
     }
 
     .contenido_tabla {
@@ -40,6 +47,7 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
+        border: 1px solid var(--border-columns);
     }
 
     .column>strong {
@@ -69,8 +77,8 @@ body {
         align-items: center;
         width: 100%;
         height: 60px;
-        border: 1px solid rgb(85, 85, 85);
-        
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
     }
 
     .field{
@@ -94,7 +102,8 @@ body {
         align-items: center;
         height: 100%;
         flex-direction: column;
-        border: 1px solid black;
+        border-bottom: 1px solid var(--border-sub-field);
+        border-top: 1px solid var(--border-sub-field);
     }
 
     
@@ -111,18 +120,11 @@ body {
         text-align: center;
         border: none;
         background: none;
-
     }
 
-    .input{
-
+    input:focus{
+        border: 3px solid black;
     }
-
-    .sub-input{
-
-    }
-
-
 
     /* tabla bobinos */
 
@@ -156,7 +158,6 @@ body {
 
     .titulo_tabla {
         padding: 20px 0;
-        border: 1px solid black;
         text-align: center;
     }
 
@@ -178,6 +179,7 @@ body {
         height: max-content;
         display: flex;
         flex-direction: column;
+        border: 1px solid var(--border-columns);
     }
 
     .column>strong {
@@ -203,8 +205,9 @@ body {
         display: flex;
         height: 120px;
         width: 100%;
-        border: 1px solid rgb(85, 85, 85);
         align-items: center;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
     }
 
     .field{
@@ -225,6 +228,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
+        flex: 1;
     }
 
     .sub-field {
@@ -234,7 +238,8 @@ body {
         width: 100%;
         height: 100%;
         flex-direction: column;
-        border: 1px solid rgb(85, 85, 85);
+        border-bottom: 1px solid var(--border-sub-field);
+        border-top: 1px solid var(--border-sub-field);
     }
 
 
@@ -254,14 +259,24 @@ body {
     }
 
 
+    [informativo="si"] {
+        display: none;
+    }
+
 
     /* tabla bobinos */
 
-    [categoria="Porcentaje de estiercol"] {
+    [categoria="Porcentaje de estiercol"][tabla="caprinos"] {
         height: 150px;
     }
-    [informativo="si"] {
-        display: none;
+
+    /*tabla bobinos carne*/
+    [categoria="Porcentaje de estiercol"][tabla="bovinos de carne"]{
+        height: 500px;
+    }
+
+    [categoria="Porcentaje de estiercol tratado"][tabla="bovinos de carne"]{
+        height: 160px;
     }
 
 
