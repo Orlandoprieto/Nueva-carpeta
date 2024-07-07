@@ -6,7 +6,10 @@
 }
 
 body {
-    padding: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 
@@ -22,7 +25,6 @@ body {
     }
 
     .contenido_tabla {
-        height: 100%;
         display: grid;
         grid-template-columns: 50px 250px 1fr;
     }
@@ -36,7 +38,6 @@ body {
 
     .column {
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -65,29 +66,38 @@ body {
     .field,
     strong {
         display: flex;
+        align-items: center;
         width: 100%;
         height: 60px;
         border: 1px solid rgb(85, 85, 85);
-        align-items: center;
+        
+    }
+
+    .field{
+        flex-direction: column;
+    }
+
+    .info_movile{
+        display: none;
     }
 
 
-
     .nested_field {
-        display: grid;
-        grid-template-rows: repeat(auto-fit, auto);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     .sub-field {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 200px;
         height: 100%;
         flex-direction: column;
-        border: 1px solid rgb(85, 85, 85);
+        border: 1px solid black;
     }
 
+    
 
     .clasification {
         font-size: 10px;
@@ -104,15 +114,30 @@ body {
 
     }
 
+    .input{
+
+    }
+
+    .sub-input{
+
+    }
+
 
 
     /* tabla bobinos */
 
-    [categoria="Porcentaje de estiercol"] {
+    [categoria="Porcentaje de estiercol"][tabla=caprinos] {
         height: 120px;
-        display: grid;
     }
 
+    /*tabla bobinos carne*/
+    [categoria="Porcentaje de estiercol"][tabla="bovinos de carne"]{
+        height: 310px;
+    }
+
+    [categoria="Porcentaje de estiercol tratado"][tabla="bovinos de carne"]{
+        height: 125px;
+    }
 
 
     label {
@@ -120,4 +145,127 @@ body {
     }
 }
 
-@media only screen and (max-width: 799px) {}
+
+
+
+
+@media only screen and (max-width: 799px) {
+    .tabla {
+        border: 2px solid black;
+    }
+
+    .titulo_tabla {
+        padding: 20px 0;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .contenido_tabla {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* .column {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 50px repeat(auto-fit, 90px);
+        border: 1px solid red;
+    } */
+
+    .column {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column>strong {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(189, 189, 189);
+    }
+
+    .field_inputs {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+
+    .info,
+    .field,
+    strong {
+        display: flex;
+        height: 120px;
+        width: 100%;
+        border: 1px solid rgb(85, 85, 85);
+        align-items: center;
+    }
+
+    .field{
+        flex-direction: column;
+    }
+
+    .info_movile{
+        color: rgb(113, 113, 113);
+        width: 100%;
+        text-align: center;
+        background-color: rgb(224, 223, 223);
+    }
+
+
+
+
+    .nested_field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sub-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        border: 1px solid rgb(85, 85, 85);
+    }
+
+
+    .clasification {
+        font-size: 10px;
+        color: rgb(139, 139, 139);
+    }
+
+    input,
+    select {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border: none;
+        background: none;
+
+    }
+
+
+
+    /* tabla bobinos */
+
+    [categoria="Porcentaje de estiercol"] {
+        height: 150px;
+    }
+    [informativo="si"] {
+        display: none;
+    }
+
+
+    label {
+        display: none;
+    }
+}

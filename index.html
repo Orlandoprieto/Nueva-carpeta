@@ -17,21 +17,21 @@
       </div>
 
       <div class="contenido_tabla">
-         <div class="categorias">
+         <div class="categorias" informativo="si">
             Fuente dedatos
          </div>
 
-         <div class="column">
-            
+         <!-- Solo visible en desktop -->
+         <div class="column" informativo="si">
+
             <strong class="info">Categoria</strong>
-            
-            
+
             <div class="info">
                <span>Cantidad de cabezas</span>
             </div>
 
-            <div categoria="Porcentaje de estiercol" class="info">
-               <span >Porcentaje de estiercol</span>
+            <div categoria="Porcentaje de estiercol" tabla="caprinos" class="info">
+               <span>Porcentaje de estiercol</span>
             </div>
 
             <div class="info">
@@ -42,7 +42,7 @@
                <span>Cantidad de nitrógeno de las camas</span>
             </div>
 
-            <div categoria="Porcentaje de estiercol" class="info">
+            <div categoria="Porcentaje de estiercol" class="info" tabla="caprinos">
                <span>Porcentaje del estiércol tratado utilizada para:</span>
             </div>
 
@@ -51,356 +51,139 @@
             </div>
          </div>
 
-         
+
          <div class="column_fields">
             <div class="field_inputs">
                <div class="column">
+
                   <strong>Sin discriminar</strong>
-                  
+
                   <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de cabezas</span>
+                     </div>
+
                      <input type="number" min="0" placeholder="N°">
                   </div>
-                  
-                  <div categoria="Porcentaje de estiercol" class="field">
-                     <div class="nested_field" categoria="Porcentaje de estiercol" >
+
+                  <div class="field" categoria="Porcentaje de estiercol" tabla="caprinos">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Porcentaje de estiercol</span>
+                     </div>
+
+                     <div class="nested_field" categoria="Porcentaje de estiercol">
                         <div class="sub-field">
                            <span class="clasification" for="">Animales en pasturas</span>
                            <input type="number" placeholder="%" min="0" max="100">
                         </div>
-      
+
                         <div class="sub-field">
                            <span class="clasification" for="">Almacenaje de sólidos</span>
                            <input type="number" placeholder="%" min="0" max="100">
                         </div>
-      
+
                         <div class="sub-field">
                            <span class="clasification" for="">Corral de engorde</span>
                            <input type="number" placeholder="%" min="0" max="100">
                         </div>
                      </div>
                   </div>
-   
+
                   <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Indicar si se aplica estiercol</span>
+                     </div>
+
                      <input type="number" placeholder="Categorica">
                   </div>
-   
+
                   <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de nitrogeno</span>
+                     </div>
+
                      <input type="number" placeholder="kg N animal-1 año-1" min="0">
                   </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
+
+                  <div class="field" categoria="Porcentaje de estiercol" tabla="caprinos">
+                     <div class="nested_field" >
+                        <!-- solo se muestraen moviles -->
+                        <div class="info_movile">
+                           <span>Porcentaje de estiercol</span>
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Animales en pasturas</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Almacenaje de sólidos</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Corral de engorde</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
                      </div>
                   </div>
-   
+
                   <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Nivel de productividad</span>
+                     </div>
+
                      <input type="number" placeholder="Categorica">
                   </div>
                </div>
-   
-   
-               <div class="column">
-                  <strong>Cabras</strong>
-                  
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="N°" min="0">
-                  </div>
-                  
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number">
-                  </div>
-               </div>
-   
-               <div class="column">
-                  <strong>Cabrillas/Chivitos</strong>
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="N°" min="0">
-                  </div>
-                  
-                  <div categoria="Porcentaje de estiercol" class="nested_field">
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number">
-                  </div>
-               </div>
-   
-               <div class="column">
-                  <strong>Cabritos</strong>
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="N°" min="0">
-                  </div>
-                  
-                  <div categoria="Porcentaje de estiercol" class="nested_field">
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field" >
-                     <label for="">a</label>
-                     <input type="number">
-                  </div>
-               </div>
-   
-               <div class="column">
-                  <strong>Capones</strong>
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="N°" min="0">
-                  </div>
-                  
-                  <div categoria="Porcentaje de estiercol" class="nested_field">
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field" >
-                     <label for="">a</label>
-                     <input type="number">
-                  </div>
-               </div>
-   
-               <div class="column">
-                  <strong>Chivos</strong>
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="N°" min="0">
-                  </div>
-                  
-                  <div categoria="Porcentaje de estiercol" class="nested_field">
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number" placeholder="%">
-                  </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
-                     <div class="sub-field">
-                        <span class="clasification" for="">Animales en pasturas</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Almacenaje de sólidos</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-   
-                     <div class="sub-field">
-                        <span class="clasification" for="">Corral de engorde</span>
-                        <input type="number" placeholder="%" min="0" max="100">
-                     </div>
-                  </div>
-   
-                  <div class="field">
-                     <label for="">a</label>
-                     <input type="number">
-                  </div>
-               </div>
-   
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
                <div class="column">
                   <strong>Fuente de datos</strong>
+
                   <div class="field">
-                     <label for="">a</label>
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Sin discriminar</span>
+                     </div>
+
                      <select>
                         <option value="">Seleccione</option>
                         <option value="">Medido</option>
@@ -408,31 +191,44 @@
                         <option value="">juicio de experto</option>
                      </select>
                   </div>
-                  
+
                   <div categoria="Porcentaje de estiercol" class="nested_field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Porcentaje de etiercol</span>
+                     </div>
+
                      <div class="sub-field">
                         <span class="clasification" for="">Animales en pasturas</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
-   
+
                      <div class="sub-field">
                         <span class="clasification" for="">Almacenaje de sólidos</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
-   
+
                      <div class="sub-field">
                         <span class="clasification" for="">Corral de engorde</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
                   </div>
-   
+
                   <div class="field">
-                     <label for="">a</label>
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>indicar si se aplica estiercol</span>
+                     </div>
+
                      <input type="number" placeholder="-" disabled>
                   </div>
-   
+
                   <div class="field">
-                     <label for="">a</label>
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de nitregeno</span>
+                     </div>
+
                      <select>
                         <option value="">Seleccione</option>
                         <option value="">Medido</option>
@@ -440,38 +236,373 @@
                         <option value="">juicio de experto</option>
                      </select>
                   </div>
-   
-                  <div class="nested_field" categoria="Porcentaje de estiercol" >
+
+                  <div class="nested_field" categoria="Porcentaje de estiercol">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Porcentaje de estiercol</span>
+                     </div>
+
                      <div class="sub-field">
                         <span class="clasification" for="">Animales en pasturas</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
-   
+
                      <div class="sub-field">
                         <span class="clasification" for="">Almacenaje de sólidos</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
-   
+
                      <div class="sub-field">
                         <span class="clasification" for="">Corral de engorde</span>
                         <input type="number" placeholder="-" min="0" max="100" disabled>
                      </div>
                   </div>
-   
+
                   <div class="field">
-                     <label for="">a</label>
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Nivel de productividad</span>
+                     </div>
+
                      <input type="number" placeholder="-" disabled>
                   </div>
                </div>
+            </div>
          </div>
+      </div>
+   </div>
 
 
-         </div>
+   <!-- tabla de bovinos -->
+   <!-- tabla de bovinos -->
+   <!-- tabla de bovinos -->
+   <!-- tabla de bovinos -->
 
+
+   <div class="tabla">
+      <div class="titulo_tabla">
+         <h2>
+            Carga de Datos de Categoría de bovinos de carne
+         </h2>
       </div>
 
-      
+      <div class="contenido_tabla">
+         <div class="categorias" informativo="si">
+            Fuente de datos
+         </div>
+
+         <!-- Solo visible en desktop -->
+         <div class="column" informativo="si">
+
+            <strong class="info">Categoria</strong>
+
+            <div class="info">
+               <span>Cantidad de cabezas</span>
+            </div>
+
+            <div class="info">
+               <span>Gestion de rodeo</span>
+            </div>
+
+            <div class="info">
+               <span>Peso vivo promedio</span>
+            </div>
+
+            <div class="info">
+               <span>Peso inicial</span>
+            </div>
+
+            <div class="info">
+               <span>Peso final</span>
+            </div>
+
+            <div class="info">
+               <span>duracion de la terminacion</span>
+            </div>
+
+            <div class="info">
+               <span>Porcentaje de vacas preñadas</span>
+            </div>
+
+            <div class="info">
+               <span>Vacas Lactando</span>
+            </div>
+
+            <div class="info">
+               <span>Leche Producida vaca lactante</span>
+            </div>
+
+            <div class="info">
+               <span>Caracterizacion dieta</span>
+            </div>
+
+            <div class="info">
+               <span>Digestibilidad alimento</span>
+            </div>
+
+            <div class="info">
+               <span>Proteina dieta</span>
+            </div>
+
+            <div class="info">
+               <span>Contenido de cenisas en alimento</span>
+            </div>
+
+            <div class="info" tabla="bovinos de carne" categoria="Porcentaje de estiercol">
+               <span>Porcentaje de estiercol</span>
+            </div>
+
+            <div class="info">
+               <span>Aporte anual nitrogeno</span>
+            </div>
+
+            <div class="info">
+               <span>Se aplica estiercol a los suelos</span>
+            </div>
+
+            <div class="info">
+               <span>cantidad de nitrogenos en camas</span>
+            </div>
+
+            <div class="info" categoria="Porcentaje de estiercol tratado" tabla="bovinos de carne">
+               <span>Porcentaje de estiercol tratado</span>
+            </div>
+
+         </div>
+
+
+         <div class="column_fields">
+            <div class="field_inputs">
+               <div class="column">
+
+                  <strong>Sin discriminar</strong>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de cabezas</span>
+                     </div>
+
+                     <input type="number" min="0" placeholder="N°">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Gestion de rodeo</span>
+                     </div>
+
+                     <input type="text" placeholder="-">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Peso vivo </span>
+                     </div>
+
+                     <input type="number" placeholder="Kg">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Peso inicial</span>
+                     </div>
+
+                     <input type="number" placeholder="kg" min="0">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Peso final</span>
+                     </div>
+
+                     <input type="number" min="0" placeholder="Kg">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Duracion de la terminacion</span>
+                     </div>
+
+                     <input type="number" placeholder="Dias" min="0">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Vacas preñadas</span>
+                     </div>
+
+                     <input type="number" placeholder="%" min="0" max="100">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Vacas lactando</span>
+                     </div>
+
+                     <input type="number" placeholder="%" min="0" max="100">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de leche</span>
+                     </div>
+
+                     <input type="number" placeholder="Kg/dias" min="0">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Caracterizacion de la dieta</span>
+                     </div>
+
+                     <input type="text" placeholder="-">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Digestion del alimento</span>
+                     </div>
+
+                     <input type="number" placeholder="%" min="0" max="100">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Proteina dieta</span>
+                     </div>
+
+                     <input type="number" placeholder="%" min="0" max="100">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Contenido de cenisas</span>
+                     </div>
+
+                     <input type="number" placeholder="Fraccion">
+                  </div>
+
+                  <div class="field" tabla="bovinos de carne" categoria="Porcentaje de estiercol">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Porcentaje de estiercol</span>
+                     </div>
+
+                     <div class="nested_field" categoria="Porcentaje de estiercol">
+                        <div class="sub-field">
+                           <span class="clasification" for="">Animales en pasturas</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Laguna anabolica</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Almasenaje de solidos</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Corral de engorde</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Distribucion diaria</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+                     </div>
+
+
+                     <div class="field">
+                        <div class="sub-field">
+                           <span class="clasification" for="">Digestor anabolico</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+                     </div>
+
+                     <div class="field">
+                        <div class="sub-field">
+                           <span class="clasification" for="">Digestor anaerorico</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Aporte anual nitrogeno</span>
+                     </div>
+
+                     <input type="number" placeholder="Kg N yr-1">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Si se aplica estiercol</span>
+                     </div>
+
+                     <input type="text" placeholder="Categorica">
+                  </div>
+
+                  <div class="field">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Cantidad de nitrogeno</span>
+                     </div>
+
+                     <input type="text" placeholder="Kg N animal-1 año-1">
+                  </div>
+
+                  <div class="field" categoria="Porcentaje de estiercol tratado" tabla="bovinos de carne">
+                     <!-- solo se muestraen moviles -->
+                     <div class="info_movile">
+                        <span>Porcentaje de estiercol tratado</span>
+                     </div>
+
+                     <div class="nested_field">
+                        <div class="sub-field">
+                           <span class="clasification" for="">Alimento</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Combustible</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+
+                        <div class="sub-field">
+                           <span class="clasification" for="">Construccion</span>
+                           <input type="number" placeholder="%" min="0" max="100">
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
+
+
 </body>
 
 </html>
